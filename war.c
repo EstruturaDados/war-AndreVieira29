@@ -22,6 +22,7 @@ int main() {
         //Nome do território
         printf("Digite o nome do território: ");
         fgets(territorios[i].nome, sizeof(territorios[i].nome), stdin);
+        territorios[i].nome[strcspn(territorios[i].nome, "\n")] = '\0';
 
 
         //cor do exército
@@ -31,7 +32,8 @@ int main() {
         //quantidade de tropas
         printf("Digite a quantidade de tropas: ");
         scanf("%d", &territorios[i].tropas);
-         printf("\n");
+        getchar();
+        printf("\n");
     }
 
     //Exibe dos dados cadastrados
